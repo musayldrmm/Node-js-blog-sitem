@@ -1,0 +1,36 @@
+<div class="container">
+      {{> adminnav}}
+      <div class="row">
+            <div class="col-md-12" style="border: solid 1px;">
+                  <table class="table">
+                        <thead>
+                              <tr>
+                                    <th>ID</th>
+                                    <th>NAME</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+
+                              </tr>
+                        </thead>
+                        <tbody>
+                              {{#each posts}}
+                              <tr>
+                                    <td>{{title}}</td>
+                                    <td>{{category.name}}</td>
+                                    <td><a class="btn btn-warning" href="/admin/link/edit/{{id}}">edit
+
+                                          </a></td>
+                                    <td>
+                                          <form action="/admin/link/{{id}}?_method=DELETE" method="POST">
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <button type="submit" class="btn btn-danger">delete</button>
+                                          </form>
+                                    </td>
+                              </tr>
+                              {{/each}}
+                        </tbody>
+                  </table>
+            </div>
+
+      </div>
+</div>

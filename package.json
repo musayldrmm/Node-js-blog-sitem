@@ -1,0 +1,25 @@
+{
+  "name": "web-proje",
+  "version": "1.0.0",
+  "description": "web-proje app",
+  "main": "/web-proje/app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^4.6.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "handlebars": "^4.5.3",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^6.1.1",
+    "nodemailer": "^6.7.2"
+  },
+  "scripts": {
+    "boot": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,27 @@
+<aside class="col-md-4" id="aside" >
+    <div class="widget">
+        <h3  class="mb-3 "style>Category</h3>
+        <div class="widget-category">
+            {{#each categories}}
+            <a href="/posts/category/{{_id}}">{{name}}<span>({{num_of_posts}})</span></a>
+            {{/each}}
+        </div>
+    </div>
+    <div class="widget">
+        <h3 class="mb-3">Latest Posts</h3>
+        <!-- single post -->
+    {{#each (limit posts 2)}}
+        <div class="widget-post">
+            <a href="/posts/{{_id}}">
+                <img class="img-fluid " src="/img/post-img/postt.jpg" alt=""> <div>{{title}}</div>
+            </a>
+            <ul class="blog-meta">
+                <li>{{generateDate post.date 'MM DD YYYY'}}</li>
+            </ul>
+        </div>
+        {{/each}}
+        <!-- /single post -->
+    </div>
+    <!-- /Posts sidebar -->
+
+</aside>

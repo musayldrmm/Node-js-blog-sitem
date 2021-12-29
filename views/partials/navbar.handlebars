@@ -1,0 +1,70 @@
+  <nav class="navbar navbar-dark  navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand text-white" href="/"
+          > <img class="logo" src="/img/manga.jfif" alt=""></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#nvbCollapse"
+          aria-controls="nvbCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nvbCollapse">
+          <ul id="section" class="navbar-nav ml-auto">
+            <li class="nav-item pl-1">
+              <a class="nav-link" href="/"
+                ><i class="fa fa-home fa-fw mr-1"></i>Ana sayfa</a
+              >
+            </li>
+            <li class="nav-item pl-1">
+              <a class="nav-link" href="/abaout"
+                ><i class="fa fa-info-circle fa-fw mr-1"></i>Hakkımızda</a
+              >
+            </li>
+            <li class="nav-item pl-1">
+              <a class="nav-link" href="/iletisim"
+                ><i class="fa fa-phone fa-fw fa-rotate-180 mr-1"></i>İletişim</a
+              >
+             </li>
+             {{#if admin}}
+               <li class="nav-item pl-1">
+              <a class="nav-link" href="/admin/admin"
+                ><i class="fa fa-phone fa-fw fa-rotate-180 mr-1"></i>Admin panel</a
+              >
+             </li>
+             {{/if}}
+             {{#if displayLink}}
+                <li class="nav-item pl-1">
+              <a class="nav-link" href="/posts/add"
+                ><i class="fa fa-phone fa-fw fa-rotate-180 mr-1"></i>Post ekle</a
+              >
+             </li>
+             {{/if}}
+             {{#unless displayLink}}
+            <li id="register" class="nav-item pl-1">
+              <a class="nav-link" href="/users/register"
+                ><i class="fa fa-user-plus fa-fw mr-1"></i>Kayıt Ol</a
+              >
+            </li>
+            {{/unless}}
+            {{#unless displayLink}}
+            <li id="login" class="nav-item pl-1">
+              <a class="nav-link " href="/users/login"
+                ><i class="fa fa-sign-in fa-fw mr-1 float"></i>Oturum Aç</a
+              >
+            </li>
+            {{/unless}}
+            {{#if displayLink}}
+              <li class="nav-item pl-1">
+              <a class="nav-link" href="/users/logout"
+                ><i class="fa fa-info-circle fa-fw mr-1"></i> Çıkış Yap</a
+              >
+            </li>
+            {{/if}}
+          </ul>
+        </div>
+      </div>
+    </nav>
